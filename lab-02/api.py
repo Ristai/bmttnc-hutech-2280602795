@@ -45,7 +45,7 @@ def vigenere_decrypt():
     decrypted_text = vigenere_cipher.vigenere_decrypt(cipher_text, key)
     return jsonify({'decrypted_text': decrypted_text})
 
-#Run the RailFence
+# RAILFENCE CIPHER ALGORITHM
 railfence_cipher = RailFenceCipher()
 
 @app.route("/api/railfence/encrypt", methods=['POST'])
@@ -65,7 +65,7 @@ def decrypt():
     return jsonify({'decrypted_message': decrypted_text})
 
 
-# Run the PlayFair
+# PLAYFAIR CIPHER ALGORITHM
 playfair_cipher = PlayFairCipher()
 
 @app.route('/api/playfair/creatematrix', methods=['POST'])
@@ -93,8 +93,7 @@ def playfair_decrypt():
     decrypted_text = playfair_cipher.playfair_decrypt(cipher_text, playfair_matrix)
     return jsonify({'decrypted_text': decrypted_text})
 
-#Run the Transposition
-
+# TRANSPOSITION CIPHER ALGORITHM
 transposition_cipher = TranspositionCipher()
 
 @app.route('/api/transposition/encrypt', methods=['POST'])
@@ -113,5 +112,6 @@ def transposition_decrypt():
     decrypted_text = transposition_cipher.decrypt(cipher_text, key)
     return jsonify({'decrypted_text': decrypted_text})
 
+# MAIN
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
