@@ -10,103 +10,84 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "M:\bmttnc-hutech-2280602795\lab-03\platforms"
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
 
-class Ui_CaesarCipher(object):
-    def setupUi(self, CaesarCipher):
-        CaesarCipher.setObjectName("CaesarCipher")
-        CaesarCipher.resize(738, 521)
-        self.centralwidget = QtWidgets.QWidget(CaesarCipher)
-        self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(220, 30, 321, 41))
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(717, 507)
+        self.label = QtWidgets.QLabel(Dialog)
+        self.label.setGeometry(QtCore.QRect(50, 130, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
-        font.setPointSize(28)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(11)
         self.label.setFont(font)
-        self.label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label.setObjectName("label")
-        self.txt_plaintext = QtWidgets.QTextEdit(self.centralwidget)
-        self.txt_plaintext.setGeometry(QtCore.QRect(120, 110, 571, 121))
-        self.txt_plaintext.setObjectName("txt_plaintext")
-        self.txt_key = QtWidgets.QTextEdit(self.centralwidget)
-        self.txt_key.setGeometry(QtCore.QRect(120, 250, 571, 31))
-        self.txt_key.setObjectName("txt_key")
-        self.txt_ciphertext = QtWidgets.QTextEdit(self.centralwidget)
-        self.txt_ciphertext.setGeometry(QtCore.QRect(120, 300, 571, 121))
-        self.txt_ciphertext.setObjectName("txt_ciphertext")
-        self.btn_encrypt = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_encrypt.setGeometry(QtCore.QRect(150, 440, 81, 31))
-        self.btn_encrypt.setObjectName("btn_encrypt")
-        self.btn_decrypt = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_decrypt.setGeometry(QtCore.QRect(590, 440, 81, 31))
-        self.btn_decrypt.setObjectName("btn_decrypt")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(20, 110, 71, 21))
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        self.label_2.setGeometry(QtCore.QRect(260, 40, 261, 51))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
-        font.setPointSize(12)
+        font.setPointSize(24)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(20, 250, 71, 21))
+        self.txt_plaintext = QtWidgets.QTextEdit(Dialog)
+        self.txt_plaintext.setGeometry(QtCore.QRect(150, 130, 491, 111))
+        self.txt_plaintext.setObjectName("txt_plaintext")
+        self.txt_ciphertext = QtWidgets.QTextEdit(Dialog)
+        self.txt_ciphertext.setGeometry(QtCore.QRect(150, 310, 491, 111))
+        self.txt_ciphertext.setObjectName("txt_ciphertext")
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setGeometry(QtCore.QRect(50, 310, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
-        font.setPointSize(12)
+        font.setPointSize(11)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(20, 300, 81, 21))
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setGeometry(QtCore.QRect(50, 260, 81, 16))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
-        font.setPointSize(12)
+        font.setPointSize(11)
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
-        CaesarCipher.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(CaesarCipher)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 738, 21))
-        self.menubar.setObjectName("menubar")
-        CaesarCipher.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(CaesarCipher)
-        self.statusbar.setObjectName("statusbar")
-        CaesarCipher.setStatusBar(self.statusbar)
+        self.txt_key = QtWidgets.QTextEdit(Dialog)
+        self.txt_key.setGeometry(QtCore.QRect(150, 260, 491, 31))
+        self.txt_key.setObjectName("txt_key")
+        self.btn_encrypt = QtWidgets.QPushButton(Dialog)
+        self.btn_encrypt.setGeometry(QtCore.QRect(160, 440, 81, 31))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        self.btn_encrypt.setFont(font)
+        self.btn_encrypt.setObjectName("btn_encrypt")
+        self.btn_decrypt = QtWidgets.QPushButton(Dialog)
+        self.btn_decrypt.setGeometry(QtCore.QRect(550, 440, 81, 31))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        self.btn_decrypt.setFont(font)
+        self.btn_decrypt.setObjectName("btn_decrypt")
 
-        self.retranslateUi(CaesarCipher)
-        QtCore.QMetaObject.connectSlotsByName(CaesarCipher)
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-    def retranslateUi(self, CaesarCipher):
+    def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        CaesarCipher.setWindowTitle(_translate("CaesarCipher", "Caesar Cipher"))
-        self.label.setText(_translate("CaesarCipher", "CAESAR CIPHER"))
-        self.txt_plaintext.setHtml(_translate("CaesarCipher", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.txt_key.setHtml(_translate("CaesarCipher", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.txt_ciphertext.setHtml(_translate("CaesarCipher", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.btn_encrypt.setText(_translate("CaesarCipher", "Encrypt"))
-        self.btn_decrypt.setText(_translate("CaesarCipher", "Decrypt"))
-        self.label_2.setText(_translate("CaesarCipher", "Plain Text:"))
-        self.label_3.setText(_translate("CaesarCipher", "Key:"))
-        self.label_4.setText(_translate("CaesarCipher", "Cipher Text:"))
+        Dialog.setWindowTitle(_translate("Dialog", "Caesar Cipher"))
+        self.label.setText(_translate("Dialog", "Plain Text:"))
+        self.label_2.setText(_translate("Dialog", "CAESAR CIPHER"))
+        self.label_3.setText(_translate("Dialog", "Cipher Text:"))
+        self.label_4.setText(_translate("Dialog", "Key:"))
+        self.btn_encrypt.setText(_translate("Dialog", "Encrypt"))
+        self.btn_decrypt.setText(_translate("Dialog", "Decrypt"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    CaesarCipher = QtWidgets.QMainWindow()
-    ui = Ui_CaesarCipher()
-    ui.setupUi(CaesarCipher)
-    CaesarCipher.show()
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
     sys.exit(app.exec_())
